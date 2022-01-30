@@ -1,0 +1,18 @@
+const newTest = dom.create('<div>create success</div>');
+console.log(newTest);
+const nextTest = dom.create('<div>this is next node</div>');
+const previousTest = dom.create('<div>this is previous node</div>');
+const sonNode = dom.create('<div>this is son node</div>');
+const parentNode = dom.create('<div>this is parent node</div>');
+dom.next(test,nextTest);
+dom.previous(test,previousTest);
+dom.append(test,sonNode);
+dom.join(test,parentNode);
+const divEmpty = window.empty;
+const emptyTest = dom.empty(divEmpty);
+console.log(emptyTest);
+dom.set(test,"title","set success");
+const getTitle = dom.get(test,"title");
+console.dir(getTitle);
+dom.text(test,"这是新的文本");
+dom.style(test,{border: '1px solid red', color: 'blue'});
