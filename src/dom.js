@@ -4,16 +4,16 @@ window.dom = {
         container.innerHTML = string.trim();
         return container.content.children[0];
     },
-    next(node, nextNode){
+    after(node, nextNode){
         node.parentNode.insertBefore(nextNode, node.nextSibling);
     },
-    previous(node, previousNode){
+    before(node, previousNode){
         node.parentNode.insertBefore(previousNode, node);
     },
     append(parent, child){
         parent.appendChild(child);
     },
-    join(child, parent){
+    wrap(child, parent){
         dom.previous(child, parent);
         dom.append(parent, child);
     },
